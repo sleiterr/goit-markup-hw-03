@@ -95,6 +95,10 @@ img {
   color: #2e2f42;
 }
 
+.header-item {
+  margin-right: 0;
+}
+
 .header-menu {
   display: flex;
   gap: 40px;
