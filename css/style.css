@@ -99,7 +99,6 @@ img {
 .header-menu {
   display: flex;
   gap: 40px;
-  margin-right: 40px
 } 
 
 .header-link {
@@ -138,7 +137,8 @@ img {
 .contact-menu {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 40px;
+  margin-right: 40px
 }
 
 .address-link {
