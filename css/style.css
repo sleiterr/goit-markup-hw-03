@@ -344,11 +344,11 @@ img {
 .subtitle-item {
   padding: 32px 16px;
   background: #FFFFFF;
+  border: 1px solid #E7E9FC;
   border-top: none;
-  /* border: 1px solid #E7E9FC; */
-  border-left: 1px solid #E7E9FC;
+  /* border-left: 1px solid #E7E9FC;
   border-right: 1px solid #E7E9FC;
-  border-bottom: 1px solid #E7E9FC;
+  border-bottom: 1px solid #E7E9FC; */
 }
 
 .portfolio-item {
