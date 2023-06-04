@@ -323,16 +323,16 @@ img {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--title-color);
 }
 .team-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.02em;
+  text-align: center;
   color: #434455;
 }
 
