@@ -98,7 +98,6 @@ img {
 .header-menu {
   display: flex;
   gap: 40px;
-  list-style-type: none;
   margin-right: 40px
 } 
 
