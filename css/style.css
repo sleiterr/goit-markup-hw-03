@@ -323,7 +323,7 @@ img {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 0.02em;
   color: var(--title-color);
 }
@@ -331,13 +331,14 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 0.02em;
   color: #434455;
 }
 
 .description-item {
  padding: 32px 16px;
+ text-align: center;
 }
 
 /**=========== PORTFOLIO ===========**/
