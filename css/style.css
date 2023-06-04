@@ -14,26 +14,69 @@ body {
   color: #434455;
 }
 
+  p, 
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none
 }
 
 .info-btn {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .link {
   text-decoration: none;
 }
 
+/**========= CONTAINER ==========**/
+
+.container {
+  width: 100%;
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* outline: 1px solid; */
+
+}
+
 /**-----------HEADER-----------**/
 
-/* .header {
-} */
+.header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E7E9FC;
+}
 
-/* .header-navigation {
-  
-} */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+}
 
 .header-logo {
   font-family: "Raleway", sans-serif;
@@ -43,6 +86,9 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
 }
 
 .attribut { 
@@ -50,17 +96,24 @@ body {
 }
 
 .header-menu {
+  display: flex;
+  gap: 24px;
   list-style-type: none;
 } 
 
-.header-menu-item {
+.header-item {
 
 }
 
-.header-menu {
+.header-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  justify-content: space-between;
+  gap: 24px;
   text-decoration: none;
   letter-spacing: 0.02em;
   color: #2e2f42;
@@ -68,8 +121,8 @@ body {
 
 /* BTN */
 
-.header-menu:hover,
-.header-menu:focus{
+.header-link:hover,
+.header-link:focus{
   color: var(--accent-color);
 }
 
@@ -82,11 +135,21 @@ body {
 .contact {
   font-style: normal;
 }
+.address-item {
+  
+}
+.contact-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
 
 .address-link {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  display: block;
+  justify-content: space-between;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--subtitle-text);
@@ -100,27 +163,44 @@ body {
 /**---------- HERO -----------**/
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
   background: #2E2F42;
 }
+
+.hero-container {
+}
+
 .hero-heading {
   font-weight: 700;
   font-size: 56px;
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
   color: var(--white-background);
 }
 .hero-btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  display: block;
+  margin: 0 auto;
   letter-spacing: 0.04em;
+  padding: 16px 32px;
   color: var(--white-background);
 }
 
 .btn {
   font-family: "Roboto", sans-serif;
   background: var(--active-links);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   cursor: pointer;
   }
 
@@ -132,17 +212,26 @@ body {
 /**---------- FEATURE -----------**/
 
 .features {
+  padding-top: 120px;
+}
 
+.features-list {
+  display: flex;
+  gap: 24px;
 }
 
 .feature-item {
-
+  width: calc((100% - 264px) / 3);
+  /* 1128 - 72 = 1056 / 4 = 
+  (264px / 3 elem) */
+  /* width: 264px; */
 }
+
 .feature-heading {
   font-weight: 500;
   font-size: 20px;
-  text-align: center;
   line-height: 1.2;
+  margin-bottom: 8px;
   letter-spacing: 0.02em;
   color: #2e2f42;
 } 
@@ -158,33 +247,45 @@ body {
 /**---------- SKILLS -----------**/
 
 .skills {
-
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
+.container-skils {
+}
+
 .skills-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+  min-width: 323px;
   letter-spacing: 0.02em;
+  margin: 0 auto;
+  margin-bottom: 72px;
   text-align: center;
   text-transform: capitalize;
   color: var(--title-color);
 }
 .skills-list {
-
+  display: flex;
+  gap: 24px;
 }
 .skills-item {
-
+  width: calc((100% - 360px) / 2);
+  border: 1px solid #E7E9FC;
 }
 
 
 /**---------- TEAM -----------**/
 
 .team {
+  padding: 120px 0;
   background: #F4F4FD;
 }
 .team-title {
   font-weight: 700;
   font-size: 36px;
+  min-width: 162px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
@@ -192,17 +293,24 @@ body {
   color: #2e2f42;
 }
 .team-list {
-
+  display: flex;
+  gap: 24px;
+  margin-top: 72px;
+  /* padding-bottom: 120px; */
 }
 
-.team-item {  
+.team-item { 
+  width: calc((100% - 72px) / 4);
   background: var(--white-background);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 
 .team-subtitle {
   font-weight: 500;
   font-size: 20px;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color);
@@ -210,28 +318,55 @@ body {
 .team-text {
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
 
+.description-item {
+ padding: 32px 16px;
+}
+
 /**=========== PORTFOLIO ===========**/
 
+.portfolio {
+  padding-bottom: 120px;
+  padding-top: 96px;
+}
+
 .portfolio-content {
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.subtitle-item {
+  padding: 32px 16px;
+  background: #FFFFFF;
+  border-top: none;
+  /* border: 1px solid #E7E9FC; */
+  border-left: 1px solid #E7E9FC;
+  border-right: 1px solid #E7E9FC;
+  border-bottom: 1px solid #E7E9FC;
 }
 
 .portfolio-item {
+  width: calc((100% - 48px) / 3);
+  /* (100%)1128 - 48 = 1080 / 3 = 360 */
   text-decoration: none;
 }
+
 .portfolio-link {
 }
+
 .link {
   
 }
 .team-subtitle {
   font-weight: 500;
   font-size: 20px;
+  text-align: left;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2E2F42;
@@ -239,6 +374,7 @@ body {
 .team-text {
   font-weight: 400;
   font-size: 16px;
+  text-align: left;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
@@ -246,12 +382,23 @@ body {
 
 /**------- BTN ---------**/
 
+.portfolio-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 72px;
+  gap: 24px;
+}
+
 .btn-item {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  padding: 12px 24px;
+  border: 1px solid #E7E9FC;
+  border-radius: 4px;
   background: var(--light-backgrounds);
   color: #4d5ae5;
   cursor: pointer;
@@ -266,8 +413,15 @@ body {
 /**============ FOOTER ==============**/
 
 .footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: #2E2F42;
 }
+
+
+.footer-container {
+}
+
 .footer-item {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -289,6 +443,8 @@ body {
 .footer-text {
   font-weight: 400;
   font-size: 16px;
+  max-width: 264px;
+  padding-top: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #F4F4FD;
